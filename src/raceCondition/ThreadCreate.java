@@ -6,14 +6,16 @@ package raceCondition;
  * Key Concepts:
  * - Each instance of `ThreadCreate` is passed the same `Counter` object.
  * - In the `run()` method, the thread increments the counter 1000 times.
- * - Since multiple threads are accessing the same `Counter` object, synchronization is 
- *   necessary to avoid race conditions.
+ * - Since multiple threads are accessing the same `Counter` object,
+ * synchronization is
+ * necessary to avoid race conditions.
  * 
  * Methods:
- * - The `run()` method is the entry point of the thread. It contains a loop that 
- *   increments the counter 1000 times.
- * - By calling the `counter.increment()` method inside the loop, each thread 
- *   tries to modify the shared counter.
+ * - The `run()` method is the entry point of the thread. It contains a loop
+ * that
+ * increments the counter 1000 times.
+ * - By calling the `counter.increment()` method inside the loop, each thread
+ * tries to modify the shared counter.
  */
 public class ThreadCreate extends Thread {
     private Counter counter;
@@ -26,9 +28,8 @@ public class ThreadCreate extends Thread {
     @Override
     public void run() {
         // Increment the counter 1000 times
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100000; i++) {
             counter.increment();
         }
     }
 }
-

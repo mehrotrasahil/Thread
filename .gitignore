@@ -1,0 +1,10 @@
+# Maven
+target/
+
+# Gradle
+build/
+
+# IntelliJ
+out/
+*.class
+.idea/
